@@ -94,11 +94,11 @@ export default {
   position: absolute;
   top: 10px;
   left: 0;
-  width: 0px;
-  height: 100%;
-  min-height: 100vh;
+  width: 0;
+  height: 0;
   opacity: 0;
   visibility: hidden;
+  overflow: hidden;
   transition: width 0.3s ease-out, visibility 0.2s ease-out, opacity 0.1s ease-in;
 }
 
@@ -108,17 +108,21 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+  min-height: 90vh;
   opacity: 1;
   visibility: visible;
+  overflow: visible;
   background-color: floralwhite;  
-  transition: width 0.2s ease-out, visibility 0.2s ease-out;
+  transition: width 0.2s ease-out, visibility 0.2s ease-out, overflow 0.2s ease-out;
 }
 
 .main-content {
   position: relative;
   top: 10px;
   left: 0;
+  height: 100%;
   opacity: 1;
+  overflow: visible;
   transition: opacity 0.1s, left 0.5s;
 }
 
@@ -126,7 +130,9 @@ export default {
   position: absolute;
   top: 10px;
   left: 100%;
+  height: 0;
   opacity: 0;
+  overflow: hidden;
   /* transition: all 0.5s; */
 }
 
@@ -157,6 +163,7 @@ export default {
     height: auto;
     margin-left: 50px;
     margin-right: 50px;
+    visibility: visible;
   }
 
   .main-content {
