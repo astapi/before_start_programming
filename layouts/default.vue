@@ -62,6 +62,7 @@ export default {
 <style>
 #app {
   height: 100vh;
+  letter-spacing: 0.1rem;
 }
 
 .main-container {
@@ -94,9 +95,11 @@ export default {
   top: 10px;
   left: 0;
   width: 0px;
-  height: 0px;
+  height: 100%;
+  min-height: 100vh;
   opacity: 0;
-  transition: all 0.5s;
+  visibility: hidden;
+  transition: width 0.3s ease-out, visibility 0.2s ease-out, opacity 0.1s ease-in;
 }
 
 .sidebar.is-active {
@@ -106,15 +109,17 @@ export default {
   width: 100%;
   height: 100%;
   opacity: 1;
+  visibility: visible;
   background-color: floralwhite;  
+  transition: width 0.2s ease-out, visibility 0.2s ease-out;
 }
 
 .main-content {
   position: relative;
-  transition: all 0.5s;
   top: 10px;
   left: 0;
   opacity: 1;
+  transition: opacity 0.1s, left 0.5s;
 }
 
 .main-content.is-active {
@@ -122,6 +127,7 @@ export default {
   top: 10px;
   left: 100%;
   opacity: 0;
+  /* transition: all 0.5s; */
 }
 
 .content {
