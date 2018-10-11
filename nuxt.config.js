@@ -14,7 +14,14 @@ module.exports = {
     ]
   },
   modules: [
-    '@nuxtjs/bulma'
+    '@nuxtjs/bulma',
+    '@nuxtjs/google-analytics'
+  ],
+  'google-analytics': {
+    id: 'UA-127305409-1'
+  },
+  plugins: [
+    { src: '~plugins/ga.js', ssr: false }
   ],
   router: {
     middleware: ['resetNabvar'],
