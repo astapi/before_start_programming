@@ -15,10 +15,17 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/bulma',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/sitemap'
   ],
   'google-analytics': {
     id: 'UA-127305409-1'
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://hard4.me',
+    cacheTime: 1000 * 60 * 15,
+    generate: true
   },
   plugins: [
     { src: '~plugins/ga.js', ssr: false }
