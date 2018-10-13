@@ -9,7 +9,7 @@
           <span aria-hidden="true"></span>
         </a>
       </div>
-      <div class="siteTitle is-size-5">プログラミング入門その前に</div>
+      <div class="siteTitle is-size-5">プログラミングはむずかしい</div>
       <div></div>
     </div>
     <div class="main-container">
@@ -20,19 +20,17 @@
           </ul>
           <p class="menu-label">プログラミングの始め方</p>
           <ul class="menu-list">
-            <li><nuxt-link to="/how_to_programming">プログラミング学習サイト</nuxt-link></li>
-          </ul>
-          <p class="menu-label">プログラミング入門以前</p>
-          <ul class="menu-list">
+            <li><nuxt-link to="/how_to_programming">プログラミングの始め方</nuxt-link></li>
             <li><nuxt-link to="/need_to_do_programming">プログラミングに必要なもの</nuxt-link></li>
           </ul>
           <p class="menu-label">プログラミングにつまずいたら</p>
           <ul class="menu-list">
-            <li><nuxt-link to="/">ああああああああ</nuxt-link></li>
+            <li><nuxt-link to="/faf">よくあるミスを確認する</nuxt-link></li>
+            <li><nuxt-link to="/retry">違う学習方法を試したりやり直す</nuxt-link></li>
           </ul>
-          <p class="menu-label">学習サイトのあと</p>
+          <p class="menu-label">一歩先へ進むためには</p>
           <ul class="menu-list">
-            <li><nuxt-link to="/">ああああああああ</nuxt-link></li>
+            <li><nuxt-link to="/nextstep">ネクストステップ</nuxt-link></li>
           </ul>
         </div>
       </div>
@@ -43,7 +41,7 @@
     </div>
 
     <footer class="footer">
-      <div class="content has-text-centered">footer</div>
+      <div class="content has-text-centered">&copy; 2018 astapi web.</div>
     </footer>
   </div>
 </template>
@@ -61,8 +59,10 @@ export default {
 
 <style>
 #app {
-  height: 100vh;
   letter-spacing: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .main-container {
@@ -143,6 +143,20 @@ export default {
 .menu-list li a.active {
   color: #fff;
   background-color: #41b883;
+}
+
+.menu-label {
+  padding-left: 0.5em;
+}
+
+.content {
+  line-height: 1.7rem;
+  padding: 1em;
+}
+
+.footer {
+  padding: 0;
+  margin-top: auto;
 }
 
 @media screen and (min-width: 1088px) {

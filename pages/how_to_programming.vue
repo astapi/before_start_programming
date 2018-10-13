@@ -1,8 +1,16 @@
 <template>
   <div class="content">
-    <h2 class="title">プログラミング学習サイト</h2>
+    <h2 class="title">プログラミングの始め方</h2>
 
-    <p>最近はプログラミングの学習はかなりしやすくなりました。例えば以下のような学習サイトがあります。</p>
+    <p>最近ではプログラミングの学習はやりやすくなりました。
+      学習効率の良さでいえば学習サイトとスクールトです。
+      次点ではプログラミング技術書です。
+    </p>
+
+    <h3>学習サイト</h3>
+
+    <p>学習サイトとは、Webサイト上で動画や独自のシステムを用いてプログラミングの学習が行えるサイトのことです。</p>
+    <p>例えば以下のような学習サイトがあります。</p>
 
     <ul class="site-list">
       <li>
@@ -60,9 +68,26 @@
       コースにより講師が違うためクオリティはそれぞれですが、有料のため説明は丁寧ですね。
       セールをしていることが多いのセール時に興味があるコースを購入するのがおすすめです。</p>
 
-    <nuxt-link to="/how_to_programming">
-      <button class="button is-link">次へ</button>
-    </nuxt-link>
+    <h3>スクール</h3>
+     <p>スクールは名前の通りプログラミングのスクールのことで講師の元で集中的にプログラミングの学習ができます。
+       メリットは対面コミュニケーションで疑問を解決できるところ、集中的に進められるところですがスクールの質もあるため安易に選べません。
+     </p>
+     <p>スクールには以下のようなところがあります。</p>
+
+    <ul class="site-list">
+      <li>
+        <p><a href="https://tech-camp.in/" target="_blank">TECH::CAMP</a></p>
+      </li>
+      <li>
+        <p><a href="https://techacademy.jp/" target="_blank">TECHACADEMY</a></p>
+      </li>
+    </ul>
+
+    <div class="content-footer is-clearfix">
+      <nuxt-link to="/need_to_do_programming">
+        <button class="button is-link is-pulled-right">次へ</button>
+      </nuxt-link>
+    </div>
   </div>
 </template>
 
@@ -89,9 +114,17 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 ul.site-list {
   list-style-type: none;
+}
+
+ul.site-list li p {
+  border-bottom: 1px solid #eaecef; 
+}
+
+h3 {
+  border-bottom: 1px solid #eaecef; 
 }
 
 @media screen and (min-width: 1088px) {
