@@ -10,7 +10,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'start' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { href: 'https://fonts.googleapis.com/css?family=Noto+Sans+JP:500&amp;subset=japanese', rel: 'stylesheet' }
     ]
   },
   modules: [
